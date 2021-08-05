@@ -1,0 +1,43 @@
+<div style="background-image: url(/images/Cala/Brands/fondoCompletoTrans.png); background-size: cover;background-repeat: no-repeat">
+    <div class="row">
+        <div class="col-5 container my-5 bg-light" style="padding: 25px; border-radius: 25px">
+            <form method="post" action="/admin/usuarios/update/{{usuario.id}}">
+                <div class="form-group my-3">
+                    <label for="username" class="form-label">Username:</label>
+                    <input type="text" class="form-control" name="username" placeholder="Ingrese el username del usuario" id="username" value="{{usuario.username}}">
+                </div>
+                <div class="form-group my-3">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <input type="text" class="form-control" name="nombre" placeholder="Ingrese el nombre del usuario" id="nombre" value="{{usuario.nombre}}">
+                </div>
+                 <div class="form-group mt-3">
+                    <label for="apellido" class="form-label">Apellido:</label>
+                    <input type="text" class="form-control" name="apellido" placeholder="Ingrese el apellido del usuario" id="apellido" value="{{usuario.apellido}}">
+                </div>
+                <div class="form-group mt-3">
+                    <label for="edad" class="form-label">Edad:</label>
+                    <input type="number" class="form-control" name="edad" placeholder="Ingrese la edad del usuario" id="edad" value="{{usuario.edad}}">
+                </div>
+                <div class="form-group mt-3">
+                    <label for="telefono" class="form-label">Teléfono:</label>
+                    <input type="number" class="form-control" name="telefono" placeholder="Ingrese el telefono del usuario" id="telefono" value="{{usuario.telefono}}">
+                </div>
+                <div class="form-group mt-3">
+                    <label for="mail" class="form-label">Email:</label>
+                    <input type="email" class="form-control" name="mail" placeholder="Ingrese el email del usuario" id="mail" value="{{usuario.mail}}">
+                </div>
+                <div class="form-group mt-3">
+                    <label for="admin" class="form-label">Admin: *</label>
+                    <input type="number" class="form-control" name="admin" placeholder="Ingrese el valor para el usuario" id="admin" value="{{usuario.admin}}">
+                        <h4>* 1 Sí, 0 No</h4>
+                </div>
+                <div class="d-grid gap-2 col-12 mt-3 justify-content-center">
+                    <button type="submit" class="btn btn-success px-5 fs-5" style="border-radius: 25px">Actualizar usuario<i class="fas fa-sync fa-lg" style="padding-left: 10px"></i></button>
+                </div>
+                <div class="d-grid gap-2 col-12 mt-3 justify-content-center">
+                    <a href="/admin/usuarios" class="btn btn-warning px-5" style="border-radius: 25px">Volver <i class="far fa-arrow-alt-circle-left"></i></a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

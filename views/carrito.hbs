@@ -1,0 +1,45 @@
+<div style="background-image: url(images/Cala/Brands/fondoCompletoTrans.png); background-size: cover;background-repeat: no-repeat">
+    <div class="row">
+        <div class="col-10 container-fluid my-5">
+            <h1 class="text-center">Carrito de compras</h1>
+            <div class="d-grid gap-2 mb-3 col-12 justify-content-center">
+                <a href="/productos" class="btn btn-outline-success px-5 fs-5" style="border-radius: 25px">Seguir comprando <i class="fas fa-shopping-basket"></i></a>
+            </div>
+            <table class="table table-hover text-center mt-3" style="background:white; border-radius: 15px">
+                <thead>
+                    <tr class="align-middle fs-5">
+                        <th>ID</th>                        
+                        <th>Nombre</th>
+                        <th>Modelo</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each carrito}}
+                    <tr>
+                        <td class="align-middle">{{id_producto}}</td>
+                        <td class="align-middle">{{nombre}}</td>
+                        <td class="align-middle">{{modelo}}</td>
+                        <td class="align-middle text-start">{{descripcion}}</td>
+                        <td class="align-middle">${{precio}}</td>
+                        <td class="align-middle"><a href="/carrito/delete/{{id}}" class="btn btn-outline-danger btn-sm" style="border-radius: 25px">Eliminar <i class="fas fa-trash-alt"></i></a></td>
+                    </tr>
+                    {{/each}}
+                    <tr class="align-middle">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="align-middle">${{precioFinal}}</td>
+                        <td class="align-middle"><a href="/carrito/compra" class="btn btn-success btn-sm" style="border-radius: 25px">Finalizar compra <i class="far fa-credit-card"></i></a></td>
+                    </tr>
+                </tbody>
+                </table>
+                <div class="d-grid gap-2 mb-3 col-12 justify-content-center">
+                    <a href="http://localhost:3000/productos" class="btn btn-warning px-5 fs-5" style="border-radius: 25px">Volver <i class="far fa-arrow-alt-circle-left"></i></a>
+                </div>
+        </div>
+    </div>
+</div>

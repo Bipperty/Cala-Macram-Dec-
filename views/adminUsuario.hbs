@@ -1,0 +1,22 @@
+<div style="background-image: url(images/Cala/Brands/fondoCompletoTrans.png); background-size: cover;background-repeat: no-repeat">
+    <div class="row">
+        <div class="col-12">
+            <div class="card container mt-5" style="width: 18rem; padding: 10px">
+                <div class="card-header text-center">
+                    <h3>{{usuario.username}}</h3>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Nombre: {{usuario.nombre}}</li>
+                    <li class="list-group-item">Apellido: {{usuario.apellido}}</li>
+                    <li class="list-group-item">Edad: {{usuario.edad}}</li>
+                    <li class="list-group-item">Teléfono: {{usuario.telefono}}</li>
+                    <li class="list-group-item">Email: {{usuario.mail}}</li>
+                    <li class="list-group-item">Fecha de creación: {{usuario.ts_create}}</li>
+                    <div class="d-grid gap-2">
+                        <a href="/user/edit" class="btn btn-outline-primary btn-sm">Editar <i class="fas fa-user-edit" style="margin-left: 5px"></i></a>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

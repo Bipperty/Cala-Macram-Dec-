@@ -1,0 +1,43 @@
+<div style="background-image: url(images/Cala/Brands/fondoCompletoTrans.png); background-size: cover;background-repeat: no-repeat">
+    <div class="row">
+        <div class="col-3 container my-5 bg-light" style="padding: 25px; border-radius: 25px">
+            <form method="post" action="/registro">
+                <div>
+                    <label for="username" class="form-label fs-5">Nombre de usuario:<span class="text-danger"> *</span></label>
+                    <input type="text" class="form-control" name="username" placeholder="Ingrese su nombre de usuario" id="nombreUsuario">
+                </div>
+                <div class="my-3">
+                    <label for="pass" class="form-label fs-5">Contraseña:<span class="text-danger"> *</span></label>
+                    <input type="password" class="form-control" name="pass" placeholder="Ingrese su contraseña" id="pass">
+                </div>
+                <div class="my-3">
+                    <label for="nombre" class="form-label fs-5">Nombre:<span class="text-danger"> *</span></label>
+                    <input type="text" class="form-control" name="nombre" placeholder="Ingrese su nombre" id="nombre">
+                </div>
+                <div class="my-3">
+                    <label for="apellido" class="form-label fs-5">Apellido:<span class="text-danger"> *</span></label>
+                    <input type="text" class="form-control" name="apellido" placeholder="Ingrese su apellido" id="apellido">
+                </div>
+                <div class="my-3">
+                    <label for="edad" class="form-label fs-5">Edad:</label>
+                    <input type="number" class="form-control" name="edad" placeholder="Ingrese su edad" id="edad">
+                </div>
+                <div class="my-3">
+                    <label for="telefono" class="form-label fs-5">Teléfono:</label>
+                    <input type="number" class="form-control" name="telefono" placeholder="Ingrese su número de teléfono" id="telefono">
+                </div>
+                <div class="my-3">
+                    <label for="mail" class="form-label fs-5">Email:<span class="text-danger"> *</span></label>
+                    <input type="email" class="form-control text-alert" name="mail" placeholder="Ingrese su email" id="mail" aria-describedby="emailHelp">
+                    <div class="fw-light" id="emailHelp">Nunca compartiremos su correo electrónico con nadie más.</div>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-outline-success" style="border-radius: 25px">Registrate</button>
+                </div>
+                <div>
+                    <p class="text-danger text-center mt-3">{{message}}</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

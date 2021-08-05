@@ -1,0 +1,44 @@
+<div style="background-image: url(images/Cala/Brands/fondoCompletoTrans.png); background-size: cover;background-repeat: no-repeat">
+    <div class="row">
+        <form action="/productos" method="post">
+            <div class="row justify-content-end mt-3 align-items-center">   
+                <div class="col-2">
+                    <input type="text" name="buscar" class="form-control" placeholder="Ingrese su búsqueda" aria-label="Buscador">
+                </div>
+                <div class="col-1">
+                    <button class="btn btn-outline-secondary">Buscar <i class="fas fa-search fa-xs" style="margin-left: 5px;"></i></button>
+                </div>
+            </div>
+        </form>     
+        {{#each productos}}        
+        <div class="card mx-5 my-2 border-dark bg-light" style="max-width: 540px;">
+            <div class="row g-0 align-items-center">
+                <div class="col-md-4">
+                    <img src="/images/{{uid}}" class="figure-img img-fluid rounded" alt="{{nombre}}, {{modelo}}">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">{{nombreCategoria}}</h3>
+                        <h3 class="card-title text-center">{{nombre}}</h3>
+                        <h4 class="card-title text-center">{{modelo}}</h4>
+                        <h5 class="card-title my-3" style="text-align: justify; text-justify: inter-word">{{descripcion}}</h5>
+                        <div class="row text-center">
+                            <div class="col">
+                                <h5 class="card-title my-3">Precio: ${{precio}}</h5>
+                            </div>
+                            <div class="col">
+                                <h5 class="card-title my-3">Stock: {{stock}}</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <a href="/productos/compra/{{id}}" class="btn btn-outline-success">Agregar a tu compra <i class="fas fa-cart-plus" style="margin-left: 5px;"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+
+        </div>
+    </div>
+</div>

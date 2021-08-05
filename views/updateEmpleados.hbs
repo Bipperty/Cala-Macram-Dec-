@@ -1,0 +1,34 @@
+<div style="background-image: url(/images/Cala/Brands/fondoCompletoTrans.png); background-size: cover;background-repeat: no-repeat">
+    <div class="row">
+        <div class="col-5 container my-5 bg-light" style="padding: 25px; border-radius: 25px">
+            <form method="post" action="/admin/empleados/update/{{empleado.id}}" enctype="multipart/form-data">
+                <div class="form-group my-3">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <input type="text" class="form-control" name="nombre" placeholder="Ingrese el nombre del empleado" id="nombre" value="{{empleado.nombre}}">
+                </div>
+                <div class="form-group my-3">
+                    <label for="apellido" class="form-label">Apellido:</label>
+                    <input type="text" class="form-control" name="apellido" placeholder="Ingrese el apellido del empleado" id="apellido" value="{{empleado.apellido}}">
+                </div>
+                 <div class="form-group mt-3">
+                    <label for="telefono" class="form-label">Teléfono:</label>
+                    <input type="number" class="form-control" name="telefono" placeholder="Ingrese el teléfono del empleado" id="telefono" value="{{empleado.telefono}}">
+                </div>
+                <div class="form-group my-3">
+                    <label for="direccion" class="form-label">Direccion:</label>
+                    <input type="text" class="form-control" name="direccion" placeholder="Ingrese la dirección del empleado" id="direccion" value="{{empleado.direccion}}">
+                </div>
+                <div class="form-group mt-3">
+                    <label for="imagen" class="form-label">Imagen:</label>
+                    <input type="file" class="form-control form-control-lg" name="imagen" placeholder="Ingrese la imagen del empleado" id="imagen"></input>
+                </div>
+                <div class="d-grid gap-2 col-12 mt-3 justify-content-center">
+                    <button type="submit" class="btn btn-success px-5 fs-5" style="border-radius: 25px">Actualizar empleado<i class="fas fa-sync fa-lg" style="padding-left: 10px"></i></button>
+                </div>
+                <div class="d-grid gap-2 col-12 mt-3 justify-content-center">
+                    <a href="/admin/empleados" class="btn btn-warning px-5" style="border-radius: 25px">Volver <i class="far fa-arrow-alt-circle-left"></i></a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

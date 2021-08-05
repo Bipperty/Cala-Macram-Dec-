@@ -1,0 +1,44 @@
+<div style="background-image: url(/images/Cala/Brands/fondoCompletoTrans.png); background-size: cover;background-repeat: no-repeat">
+    <div class="row">
+        <div class="col-10 container mt-5">
+            <table class="table table-hover text-center" style="background:white; border-radius: 15px">
+                <thead>
+                    <tr class="align-middle">
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad:</th>
+                        <th><i class="fas fa-mobile"></i></th>
+                        <th><i class="fas fa-envelope"></i></th>
+                        <th>Fecha de creación:</th>
+                        <th>Admin: *</th>
+                        <th><i class="fas fa-edit"></i></th>
+                        <th><i class="fas fa-trash-alt"></i></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each usuarios}}
+                        <tr>
+                            <td class="align-middle">{{id}}</td>
+                            <td class="align-middle">{{username}}</td>
+                            <td class="align-middle">{{nombre}}</td>
+                            <td class="align-middle">{{apellido}}</td>
+                            <td class="align-middle">{{edad}}</td>
+                            <td class="align-middle">{{telefono}}</td>
+                            <td class="align-middle">{{mail}}</td>
+                            <td class="align-middle">{{ts_create}}</td>
+                            <td class="align-middle">{{admin}}</td>
+                            <td class="align-middle"><a href="/admin/usuarios/update/{{id}}" class="btn btn-outline-primary btn-sm" style="border-radius: 25px">Editar</a></td>
+                            <td class="align-middle"><a href="/admin/usuarios/delete/{{id}}" class="btn btn-outline-danger btn-sm" style="border-radius: 25px">Eliminar</a></td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            <h4>* 1 Sí, 0 No</h4>
+            <div class="d-grid gap-2 mb-3 col-12 justify-content-center">
+                <a href="/admin" class="btn btn-warning px-5 fs-5" style="border-radius: 25px">Volver <i class="far fa-arrow-alt-circle-left"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
